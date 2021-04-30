@@ -17,7 +17,7 @@ var InfoRoute = require('./routes/inforoute');
 
 
 
-
+app.get('/',(req,res) =>{res.send("hello word")})
 
 app.use('/api/auth', authRoute);
 app.use('/api/suivi', SuiviRoute);
