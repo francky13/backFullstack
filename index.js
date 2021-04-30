@@ -5,9 +5,11 @@ var app = express();
 var http = require('http');
 var server = http.Server(app);
 
-app.use(express.static(__dirname + "/web"));
-var SuiviRoute = require('./routes/SuiviRoute');
-app.use('/api/suivi', SuiviRoute);
+app.use(express.static('client'));
+
+server.listen(PORT, function() {
+  console.log('Chat server running');
+});
 
 
 server.listen(PORT, function() {
