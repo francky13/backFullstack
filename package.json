@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node index.js",
     "build": "ng build",
-    "heroku-postbuild": "ng --prod"
+    "heroku-postbuild": "ng build --prod --aot"
   },
   "author": "",
   "license": "ISC",
