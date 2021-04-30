@@ -1,0 +1,26 @@
+back-end:
+    ☐ crud user
+    ☐ crud ville
+    ☐ crud nombre de test 
+    ☐ cr patient + forme 
+    ☐ fonction ( poucentage , calule nombre evolutif du covid() +tableau)
+    ☐ authentification
+    ☐ vaccination ( cr + information)
+
+front-end:
+    ☐ liste 
+    ☐ tableau statistique
+    ☐ information
+    ☐ vactination
+
+web Back-end:
+    ☐ formulaire d'insertion
+    ☐ formulaire d'hautentification
+
+contrainte :
+    1- URL normalisé (rewriting)
+    2- Structure des données utilisant h1, h2, ..., h6
+    3- Utilisation des titres pour la page
+    4- Utilisation de balise méta
+
+
