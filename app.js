@@ -2,7 +2,7 @@ let express = require('express');
 let app = express();
 
 let cors = require('cors');
-app.use(cors({ origin: "http://localhost:3000/" }));
+app.use(cors({ origin: "http://localhost:8080/" }));
 app.use(express.static(__dirname + "/web"));
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');

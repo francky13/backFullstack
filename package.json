@@ -1,27 +1,28 @@
 {
-  "name": "za",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name":"za",
+  "version":"1.0.0",
+  "description":"",
+  "main":"index.js",
   "engines": {
-    "node": "12.16.1",
-    "npm": "6.13.4"
+    "node":"12.16.1",
+    "npm":"6.13.4"
   },
-  "scripts": {
-    "start": "node index.js"
+  "scripts":{
+    "start":"node index.js",
+    " heroku-postbuild ":"npm run build "
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-list-endpoints": "^5.0.0",
-    "jsonwebtoken": "^8.5.1",
-    "mysql": "^2.18.1",
-    "mysql-model": "0.0.3",
-    "nodemon": "^2.0.7",
-    "officegen": "^0.6.5"
+  "author":"",
+  "license":"ISC",
+  "dependencies":{
+    "bcrypt":"^5.0.1",
+    "body-parser":"^1.19.0",
+    "cors":"^2.8.5",
+    "express":"^4.17.1",
+    "express-list-endpoints":"^5.0.0",
+    "jsonwebtoken":"^8.5.1",
+    "mysql":"^2.18.1",
+    "mysql-model":"0.0.3",
+    "nodemon":"^2.0.7",
+    "officegen":"^0.6.5"
   }
 }
