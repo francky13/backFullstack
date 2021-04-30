@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+    "engines": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
+  },
   "scripts": {
     "start": "node index.js",
-    "build": "ng build --prod"
+    "build": "ng build",
+    "heroku-postbuild": "ng --prod"
   },
   "author": "",
   "license": "ISC",
@@ -20,9 +25,6 @@
     "mysql-model": "0.0.3",
     "nodemon": "^2.0.7",
     "officegen": "^0.6.5"
-  },
-  "engines": {
-    "node": "12.16.1",
-    "npm": "6.13.4"
   }
+
 }
