@@ -10,5 +10,9 @@ app.use(express.static('routes'));
 server.listen(PORT, function() {
   console.log('Chat server running');
 });
-router.get("/statistiquepays", statistiquepays);
+
+var SuiviRoute = require('./routes/SuiviRoute');
+
+app.use('/', SuiviRoute);
+
 
