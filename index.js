@@ -13,14 +13,14 @@ app.use((req, res, next) => {
   next();
 });
 
-var authRoute = require('./routes/auth');
+
 var SuiviRoute = require('./routes/SuiviRoute');
-var InfoRoute = require('./routes/inforoute');
 
 
-app.use('/api/auth', authRoute);
+
+
 app.use('/api/suivi', SuiviRoute);
-app.use('/api/info', InfoRoute);
+
 
 server.listen(PORT, function() {
   

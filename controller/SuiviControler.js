@@ -1,5 +1,4 @@
-const { hashSync, genSaltSync, compareSync } = require("bcrypt");
-const { sign } = require("jsonwebtoken");
+
 const {cumuljournalier,cumul,cumulpays,positivite,NewSuivi} = require("../Model/suivi");
 
 module.exports = {

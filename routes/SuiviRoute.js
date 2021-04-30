@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 let bodyParser = require('body-parser');
 router.use(bodyParser.json());
-const { checkToken } = require("./tokenvalidation");
+
 
 
 const {
@@ -10,7 +10,7 @@ const {
 } = require("../controller/SuiviControler");
 
 
-router.post('/newsuivi',checkToken,create);
+
 router.get("/statistiquepays", statistiquepays);
 router.get("/statistique", statistique);
 router.get("/statistiqueJour", statistiqueJour);
