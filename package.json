@@ -9,7 +9,7 @@
   },
   "scripts":{
     "start":"node index.js",
-    " heroku-postbuild ":"npm run build "
+    "heroku-postbuild":"ng build --prod"
   },
   "author":"",
   "license":"ISC",
