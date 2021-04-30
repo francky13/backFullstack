@@ -9,12 +9,14 @@ app.use(express.static('client'));
 
 server.listen(PORT, function() {
   console.log('Chat server running');
+  const all_routes = require('express-list-endpoints');
+  console.log(all_routes(app));
 });
 
+var io = require('socket.io')(server);
 
-server.listen(PORT, function() {
-  console.log('Express server listening on port ' + PORT);
-    const all_routes = require('express-list-endpoints');
-    console.log(all_routes(app));
+io.on('connection', function(socket) {
+  socket.on('message', function(msg) {
+    io.emit('message', msg);
+  });
 });
-
