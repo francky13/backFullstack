@@ -2,12 +2,9 @@
   "name": "fullstackcovid",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-     "start": "node index.js",
-      "build": "ng build",
-       "heroku-postbuild": "ng build --prod"
-       
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
