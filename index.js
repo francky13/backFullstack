@@ -7,8 +7,7 @@ var server = http.Server(app);
 
 app.use(express.static('routes'));
 
-var SuiviRoute = require('./routes/SuiviRoute');
-app.use('/api/suivi', SuiviRoute);
+
 
 
 server.listen(PORT, function() {
@@ -17,4 +16,12 @@ server.listen(PORT, function() {
   console.log(all_routes(app));
 });
 
+
+var io = require('socket.io')(server);
+
+io.on('connection', function(socket) {
+  socket.on('message', function(msg) {
+    io.emit('message', msg);
+  });
+});
 
