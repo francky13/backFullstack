@@ -5,31 +5,16 @@ var app = express();
 var http = require('http');
 var server = http.Server(app);
 
-app.use(express.static(__dirname + "/web"));
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-  next();
-});
-
-
-var SuiviRoute = require('./routes/SuiviRoute');
-
-
-
-
-app.use('/api/suivi', SuiviRoute);
-
+app.use(express.static('client'));
 
 server.listen(PORT, function() {
-  
-  console.log('Express server listening on port ' + PORT);
-  const all_routes = require('express-list-endpoints');
-  console.log(all_routes(app));
+  console.log('Chat server running');
 });
 
+var io = require('socket.io')(server);
 
-
-
-
+io.on('connection', function(socket) {
+  socket.on('message', function(msg) {
+    io.emit('message', msg);
+  });
+});
