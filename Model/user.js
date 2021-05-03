@@ -4,7 +4,7 @@ let db = require('../db');
 module.exports = {
     getUser: callBack => {
     db.query(
-      `select * from user`,[],
+      `select * from users`,[],
       (error, results, fields) => {
         if (error) {
           callBack(error);
@@ -14,7 +14,7 @@ module.exports = {
     );
   },
     createUSer: (user,callBack)=>{
-        return db.query('Insert into user(idUser, nom,mail,Mdp) values(?, ?, ?,?)', [user.idUser, user.nom, user.mail,user.Mdp],
+        return db.query('Insert into users(idUser, nom,mail,Mdp) values(?, ?, ?,?)', [user.idUser, user.nom, user.mail,user.Mdp],
         (error, results, fields) => {
         if (error) {
           callBack(error);
@@ -25,7 +25,7 @@ module.exports = {
   },
   getUserByUserEmail: (mail, callBack) => {
     db.query(
-      `select * from user where mail = ?`,
+      `select * from users where mail = ?`,
       [mail],
       (error, results, fields) => {
         if (error) {
