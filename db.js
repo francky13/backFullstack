@@ -1,9 +1,8 @@
 var mysqlModel = require('mysql');
 let connection = mysqlModel.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'fullstackcovis'
+    host: 'mysql-francky.alwaysdata.net',
+    user: 'francky',
+    password: 'fl5900u',
+    database: 'francky_fullstack'
 });
 module.exports = connection;
-
