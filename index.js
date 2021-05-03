@@ -4,15 +4,22 @@ var app = express();
 
 var http = require('http');
 var server = http.Server(app);
-
+app.use(cors({ origin: "http://localhost:5000/" }));
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+  next();
+});
 
 app.use(express.static(__dirname + "/web"));
 var SuiviRoute = require('./routes/SuiviRoute');
+var authRoute = require('./routes/auth');
+var InfoRoute = require('./routes/inforoute');
 
-
-
-app.use('/', SuiviRoute);
-
+app.use('/api/auth', authRoute);
+app.use('/api/suivi', SuiviRoute);
+app.use('/api/info', InfoRoute);
 
 
 server.listen(PORT, function() {
