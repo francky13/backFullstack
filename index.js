@@ -16,10 +16,14 @@ app.use(express.static(__dirname + "/web"));
 var SuiviRoute = require('./routes/SuiviRoute');
 var authRoute = require('./routes/auth');
 var InfoRoute = require('./routes/inforoute');
+var VaccinsRoute = require('./routes/vaccinsRoute');
+
 
 app.use('/api/auth', authRoute);
 app.use('/api/suivi', SuiviRoute);
 app.use('/api/info', InfoRoute);
+app.use('/api/vaccins', VaccinsRoute);
+
 
 
 server.listen(PORT, function() {
