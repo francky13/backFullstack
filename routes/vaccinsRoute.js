@@ -5,11 +5,13 @@ router.use(bodyParser.json());
 
 
 
-const {create, getnombrevaccins
+const {create, getnombrevaccins,total
 } = require("../controller/vaccinsController");
 
 
 router.post('/newpostvaccins',create);
-router.get("/getpostvaccins", getnombrevaccins);
+router.get("/getvaccins", getnombrevaccins);
+router.get("/gettotal", total);
+
 
 module.exports = router;
